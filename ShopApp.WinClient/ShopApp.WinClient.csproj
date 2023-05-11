@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A17BCF57-C761-45DC-AA87-27929FAA34F9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ShopApp.WinClient</RootNamespace>
+    <AssemblyName>ShopApp.WinClient</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="StructureMap, Version=4.4.2.472, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\StructureMap.4.4.2\lib\net45\StructureMap.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\ConfigurationTools.cs" />
+    <Compile Include="IoC\TypesRegistry.cs" />
+    <Compile Include="Models\FinancialYearModel.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Corps\Editor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Corps\Editor.Designer.cs">
+      <DependentUpon>Editor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Corps\List.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Corps\List.Designer.cs">
+      <DependentUpon>List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FinancialYears\Editor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\FinancialYears\Editor.Designer.cs">
+      <DependentUpon>Editor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FinancialYears\List.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\FinancialYears\List.Designer.cs">
+      <DependentUpon>List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Inventories\Editor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Inventories\Editor.Designer.cs">
+      <DependentUpon>Editor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Inventories\List.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Inventories\List.Designer.cs">
+      <DependentUpon>List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\InventoryInsTypes\Editor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\InventoryInsTypes\Editor.Designer.cs">
+      <DependentUpon>Editor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\InventoryInsTypes\List.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\InventoryInsTypes\List.Designer.cs">
+      <DependentUpon>List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\InventoryIns\Editor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\InventoryIns\Editor.Designer.cs">
+      <DependentUpon>Editor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\InventoryIns\List.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\InventoryIns\List.Designer.cs">
+      <DependentUpon>List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProductCateogries\Editor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ProductCateogries\Editor.Designer.cs">
+      <DependentUpon>Editor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProductCateogries\List.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ProductCateogries\List.Designer.cs">
+      <DependentUpon>List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProductCateogries\ParameterEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ProductCateogries\ParameterEditor.Designer.cs">
+      <DependentUpon>ParameterEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProductCateogries\Parameters.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ProductCateogries\Parameters.Designer.cs">
+      <DependentUpon>Parameters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Products\Editor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Products\Editor.Designer.cs">
+      <DependentUpon>Editor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Products\List.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Products\List.Designer.cs">
+      <DependentUpon>List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProductUnits\Editor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ProductUnits\Editor.Designer.cs">
+      <DependentUpon>Editor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProductUnits\List.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ProductUnits\List.Designer.cs">
+      <DependentUpon>List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SystemForms\CorporationEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SystemForms\CorporationEditorForm.Designer.cs">
+      <DependentUpon>CorporationEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SystemForms\DbConnectionSettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SystemForms\DbConnectionSettingsForm.Designer.cs">
+      <DependentUpon>DbConnectionSettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SystemForms\FinancialYearEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SystemForms\FinancialYearEditorForm.Designer.cs">
+      <DependentUpon>FinancialYearEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SystemForms\SplashScreenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SystemForms\SplashScreenForm.Designer.cs">
+      <DependentUpon>SplashScreenForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Views\InventoryIns\Editor.resx">
+      <DependentUpon>Editor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SystemForms\CorporationEditorForm.resx">
+      <DependentUpon>CorporationEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SystemForms\DbConnectionSettingsForm.resx">
+      <DependentUpon>DbConnectionSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SystemForms\FinancialYearEditorForm.resx">
+      <DependentUpon>FinancialYearEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SystemForms\SplashScreenForm.resx">
+      <DependentUpon>SplashScreenForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ShopApp.DataLayer\ShopApp.DataLayer.csproj">
+      <Project>{3f08e4ab-5a0b-43ec-9e1d-16bb8efae4c1}</Project>
+      <Name>ShopApp.DataLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShopApp.Entities\ShopApp.Entities.csproj">
+      <Project>{af470ce7-72f2-4d07-a985-ace51657c995}</Project>
+      <Name>ShopApp.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShopApp.Framework\ShopApp.Framework.csproj">
+      <Project>{3bfbf486-d8d6-4f78-b25a-9068104f092d}</Project>
+      <Name>ShopApp.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShopApp.Repositories\ShopApp.Repositories.csproj">
+      <Project>{a42925a5-fa5f-4d62-803a-f64680695477}</Project>
+      <Name>ShopApp.Repositories</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShopApp.RepositoryAbstracts\ShopApp.RepositoryAbstracts.csproj">
+      <Project>{5db25a68-d26d-437a-9452-0e44fac70100}</Project>
+      <Name>ShopApp.RepositoryAbstracts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\purple_background_with_bubbles-wallpaper-1280x768.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopdbscript.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
